@@ -1,1 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gold Mini Golf — 9 Holes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Gold Mini Golf — 9 Holes</h1>
+      <div class="hud">
+        <div class="panel">
+          <span class="small">Best Score</span>
+          <strong id="best">—</strong>
+        </div>
+        <div class="panel">
+          <span class="small">Hole</span>
+          <strong id="holeIndex">1 / 9</strong>
+        </div>
+        <div class="panel">
+          <span class="small">Strokes</span>
+          <strong id="strokes">0</strong>
+        </div>
+        <div class="controls">
+          <button id="restart">Restart</button>
+          <button id="resetBest">Reset Best</button>
+        </div>
+      </div>
+    </header>
+
+    <canvas id="game" width="960" height="640"></canvas>
+
+    <div class="footer">
+      Aim by dragging from the ball to set direction and power. Release to preview, then <strong>Confirm</strong> the shot.
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="powerbar" title="Power">
+        <i id="powerFill"></i>
+      </div>
+      <div class="confirm-box">
+        <button id="confirm" class="primary" style="display:none">Confirm Shot</button>
+        <button id="cancel" style="display:none">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
